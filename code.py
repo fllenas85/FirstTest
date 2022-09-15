@@ -1,5 +1,10 @@
-from time import sleep
+import board
+import neopixel
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+dot.brightness = 0.5 
+
+print("Make it red!")
 
 while True:
-    print("Goodbye World!")
-    sleep(1)
+    dot.fill((0, 5, 1))
